@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>코치진 소개 - GG E-Sports Academy</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f3f3f3;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            position: relative;
+            width: 100%;
+            background-color: white;
+        }
+        #logo img {
+            height: 50px;
+            transition: transform 0.3s;
+        }
+
+        #logo img:hover {
+            transform: scale(1.1);
+        }
+
+        #gnb ul {
+            display: flex;
+            list-style: none;
+        }
+
+        #gnb ul li {
+            margin-left: 40px;
+        }
+
+        #gnb ul li a {
+            color: #FF7D12;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            padding: 5px 10px;
+        }
+
+        #gnb ul li a:hover {
+            color: #FFEE15;
+        }
+
+        #main-banner {
+            background: url('메뉴2배너.jpg') no-repeat center center;
+            background-size: cover;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin-top: 80px;
+            position: relative;
+            z-index: 1;
+        }
+
+        #main-banner h1 {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        #main-banner p {
+            margin-top: 30px;
+            font-size: 18px;
+            color: #cdcdcd;
+        }
+
+        #content {
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #FF7D12;
+            margin-top: 40px;
+        }
+
+        .curriculum {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .curriculum-box {
+            width: 30%;
+            padding: 20px;
+            text-align: center;
+            min-height: 600px;
+            margin-bottom: 70px;
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .curriculum-box:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .step-chip {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #9e9e9e;
+            color: white;
+            font-weight: bold;
+            border-radius: 30px;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .sub-title {
+            color: #FF7D12;
+            font-size: 12px;
+        }
+
+        .curriculum-box h3 {
+            font-size: 20px;
+            color: #000;
+        }
+
+        .curriculum-box p {
+            margin: 20px;
+            color: #5c5c5c;
+            font-weight: bold;
+            text-align: left;
+        }
+
+        .curriculum-box ul {
+            list-style: none;
+            padding-left: 0;
+            margin: 20px 0 60px 0;
+        }
+
+        .curriculum-box ul li {
+            margin-bottom: 10px;
+        }
+
+        .curriculum-box img {
+            width: 70%;
+            height: auto;
+            margin: 20px 0;
+        }
+
+        footer {
+            background-color: #000;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        footer p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+
+        .coach-card {
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, background 0.3s;
+        }
+
+        .coach-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .coach-card-text {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            transition: transform 0.3s, font-size 0.3s, opacity 0.3s;
+        }
+
+        .coach-card-text h3 {
+            font-size: 18px;
+            margin: 5px 0;
+        }
+
+        .coach-card-text p {
+            font-size: 14px;
+            margin: 5px 0;
+        }
+
+        .coach-card:hover {
+            background: rgba(0, 0, 0, 0.5);
+            transform: scale(1.05);
+        }
+
+        .coach-card:hover .coach-card-text {
+            transform: translate(0, -10px) scale(1.2);
+            opacity: 1;
+            font-size: 20px;
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        .coach-card:hover img {
+            opacity: 0.3;
+        }
+
+        @media (min-width: 1025px) {
+            .coach-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 20px;
+                grid-template-rows: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 1024px) {
+            header {
+                flex-direction: column;
+                align-items: center;
+                padding: 20px;
+            }
+
+            #gnb ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            #gnb ul li {
+                margin: 10px 0;
+            }
+
+            .coach-grid {
+                display: block;
+            }
+            .coach-card {
+                margin: 40px 0;
+            }
+
+            .curriculum-box {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            #main-banner h1 {
+                font-size: 36px;
+            }
+
+            #main-banner p {
+                font-size: 16px;
+            }
+
+            footer p {
+                font-size: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <a href="index.html"><img src="로고.png" alt="GG E-Sports Academy Logo"></a>
+        </div>
+        <nav id="gnb">
+            <ul>
+                <li><a href="index1.html">프로그램 과정</a></li>
+                <li><a href="index2.html">코치진 안내</a></li>
+                <li><a href="index3.html">수강생 후기</a></li>
+                <li><a href="index4.html">FAQ</a></li>
+                <li><a href="index5.html">학원 캠퍼스</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="main-banner">
+        <p style="font-size: small; margin-top: 20px; margin-bottom: 0; color: rgb(106, 106, 106);">이스포츠 코치진</p>
+        <h1 style="margin-top: 0;">게임별 코치 라인업</h1>
+        <p>실력만 좋은 코치는 이제 필요없죠, 여러분의 눈높이에서 누구보다 꼼꼼하게 지도해드립니다</p>
+    </section>
+
+    <section id="coach-introduction">
+        <h2 style="margin-bottom: 100px;">대표 코치 소개</h2>
+
+        <div class="coach-grid">
+            <div class="coach-card">
+                <img src="발로국대1.jpg" alt="코치 1">
+                <div class="coach-card-text">
+                    <h3>FLAKWER231 / 리그 오브 레전드</h3>
+                    <p>DRX 서브 감독 출신</p>
+                    <p>탑 라인전 & 운영</p>
+                </div>
+            </div>
+            <div class="coach-card">
+                <img src="발로국대2.jpg" alt="코치 2">
+                <div class="coach-card-text">
+                    <h3>RUDNKAS / 리그 오브 레전드</h3>
+                    <p>T1 협력 기획 감독 출신</p>
+                    <p>정글링 & 맵 리딩</p>
+                </div>
+            </div>
+            <div class="coach-card">
+                <img src="발로국대3.jpg" alt="코치 3">
+                <div class="coach-card-text">
+                    <h3>DDOS / 리그 오브 레전드</h3>
+                    <p>VEX 세계 챔피언십 미드라이너 출신</p>
+                    <p>미드 운영 & 로밍</p>
+                </div>
+            </div>
+            <div class="coach-card">
+                <img src="발로국대4.jpg" alt="코치 4">
+                <div class="coach-card-text">
+                    <h3>R2HAS / 오버워치</h3>
+                    <p>SEOUL DYNASTY 감독 출신</p>
+                    <p>탱커 & 힐러 포지셔닝</p>
+                </div>
+            </div>
+            <div class="coach-card">
+                <img src="발로국대5.jpg" alt="코치 5">
+                <div class="coach-card-text">
+                    <h3>CXXXXY / 발로란트</h3>
+                    <p>발로란트 국가대표 양성 코치 출신</p>
+                    <p>팀워크 & 대회 전략</p>
+                </div>
+            </div>
+            <div class="coach-card">
+                <img src="발로국대6.jpg" alt="코치 6">
+                <div class="coach-card-text">
+                    <h3>PPLUSMINUS / 발로란트</h3>
+                    <p>발로란트 국가대표 선발 감독 출신</p>
+                    <p>게임 데이터 분석</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>사업자등록번호: 000-00-00000 | Tel: 02-0000-0000 | EMAIL: email@domain.com</p>
+        <p>&copy; 2024 GG E-Sport Academy. All rights reserved.</p>
+    </footer>
+</body>
+</html>

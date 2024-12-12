@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>프로그램 과정 - GG E-Sports Academy</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f3f3f3;
+        }
+    
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            position: relative;
+            width: 100%;
+            background-color: white;
+        }
+    
+        #logo img {
+            height: 50px;
+            transition: transform 0.3s;
+        }
+    
+        #logo img:hover {
+            transform: scale(1.1);
+        }
+    
+        #gnb ul {
+            display: flex;
+            list-style: none;
+        }
+    
+        #gnb ul li {
+            margin-left: 40px;
+        }
+    
+        #gnb ul li a {
+            color: #FF7D12;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            padding: 5px 10px;
+        }
+    
+        #gnb ul li a:hover {
+            color: #FFEE15;
+        }
+    
+        #main-banner {
+            background: url('메뉴1배너.jpg') no-repeat center center;
+            background-size: cover;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin-top: 80px;
+        }
+    
+        #main-banner h1 {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+    
+        #main-banner p {
+            margin-top: 30px;
+            font-size: 18px;
+            color: #cdcdcd;
+        }
+    
+        #content {
+            padding: 20px;
+        }
+    
+        h2 {
+            text-align: center;
+            color: #FF7D12;
+            margin-top: 40px;
+        }
+    
+        .curriculum {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+    
+        .curriculum-box {
+            width: 30%;
+            padding: 20px;
+            text-align: center;
+            min-height: 600px;
+            margin-bottom: 70px;
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease;
+        }
+    
+        .curriculum-box:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+    
+        .step-chip {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #9e9e9e;
+            color: white;
+            font-weight: bold;
+            border-radius: 30px;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+    
+        .sub-title {
+            color: #FF7D12;
+            font-size: 12px;
+        }
+    
+        .curriculum-box h3 {
+            font-size: 20px;
+            color: #000;
+        }
+    
+        .curriculum-box p {
+            margin: 20px;
+            color: #5c5c5c;
+            font-weight: bold;
+            text-align: left;
+        }
+    
+        .curriculum-box ul {
+            list-style: none;
+            padding-left: 0;
+            margin: 20px 0 60px 0;
+        }
+    
+        .curriculum-box ul li {
+            margin-bottom: 10px;
+        }
+    
+        .curriculum-box img {
+            width: 70%;
+            height: auto;
+            margin: 20px 0;
+        }
+    
+        footer {
+            background-color: #000;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            margin-top: 50px;
+        }
+    
+        footer p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+    
+        @media (max-width: 1024px) {
+            #gnb ul {
+                flex-direction: column;
+                align-items: center;
+            }
+    
+            #gnb ul li {
+                margin: 10px 0;
+            }
+    
+            .curriculum-box {
+                width: 45%;
+                margin-bottom: 20px;
+            }
+    
+            #main-banner h1 {
+                font-size: 36px;
+            }
+    
+            #main-banner p {
+                font-size: 16px;
+            }
+        }
+    
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: center;
+            }
+    
+            .curriculum-box {
+                width: 100%;
+            }
+    
+            #main-banner h1 {
+                font-size: 28px;
+            }
+    
+            #main-banner p {
+                font-size: 14px;
+            }
+        }
+    
+        @media (max-width: 480px) {
+            #logo img {
+                height: 40px;
+            }
+    
+            .curriculum-box {
+                width: 100%;
+            }
+    
+            #main-banner h1 {
+                font-size: 24px;
+            }
+    
+            #main-banner p {
+                font-size: 12px;
+            }
+    
+            footer p {
+                font-size: 10px;
+            }
+        }
+    </style>
+    
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <a href="index.html"><img src="로고.png" alt="GG E-Sports Academy Logo"></a>
+        </div>
+        <nav id="gnb">
+            <ul>
+                <li><a href="index1.html">프로그램 과정</a></li>
+                <li><a href="index2.html">코치진 안내</a></li>
+                <li><a href="index3.html">수강생 후기</a></li>
+                <li><a href="index4.html">FAQ</a></li>
+                <li><a href="index5.html">학원 캠퍼스</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="main-banner">
+        <p style="font-size: small; margin-top: 20px; margin-bottom: 0; color: black;">리그 오브 레전드</p>
+        <h1 style="margin-top: 0;">솔랭 완전 정복 클래스</h1>
+        <p>라인전을 이해하고, 운영을 할 줄 알면 게임 전체 흐름을 가지고 놀 수 있는 플레이어로 거듭날 수 있습니다</p>
+    </section>
+
+    <section id="content">
+        <h2>커리큘럼</h2>
+        <p style="text-align: center; margin-bottom: 100px; font-size: 14px;">리그 오브 레전드 티어별 세부 프로그램을 제공합니다</p>
+        <div class="curriculum">
+            <div class="curriculum-box">
+                <div class="step-chip">STEP 01</div>
+                <h3>기초반</h3>
+                <p style="text-align: center; font-size: 12px;">더 이상 롤린이는 싫어!</p>
+                <img src="티어1.png">
+                <ul>
+                    <li>챔피언 및 챔피언 상성의 이해</li>
+                    <li>라인전의 이해 기본</li>
+                    <li>정글 포지션의 이해</li>
+                </ul>
+                <p class="details">수강방식 | 오프라인 교육 진행</p>
+                <p class="details">수강시간 | 주 6시간(3일)</p>
+                <p class="details">수강인원 | 6인이내 소수 정예</p>
+                <p class="details">수강혜택 | 아카데미 연습실 자유 이용</p>
+            </div>
+            <div class="curriculum-box">
+                <div class="step-chip">STEP 02</div>
+                <h3>심화반</h3>
+                <p style="text-align: center; font-size: 12px;">캐리머신 나가신다!</p>
+                <img src="티어3.png">
+                <ul>
+                    <li>팀 조합의 이해</li>
+                    <li>라인전의 이해 심화</li>
+                    <li>맵 리딩과 운영의 이해</li>
+                </ul>
+                <p class="details">수강방식 | 오프라인 교육 진행</p>
+                <p class="details">수강시간 | 주 10시간(4일)</p>
+                <p class="details">수강인원 | 4인이내 소수 정예</p>
+                <p class="details">수강혜택 | 아카데미 연습실 자유 이용</p>
+                <p class="details">우수 수료생 아마추어 게이머 대회 참가 기회</p>
+            </div>
+            <div class="curriculum-box">
+                <div class="step-chip">STEP 03</div>
+                <h3>실전반</h3>
+                <p style="text-align: center; font-size: 12px;">그랜드마스터의 세계로!</p>
+                <img src="티어2.png">
+                <ul>
+                    <li>팀 게임의 이해</li>
+                    <li>라인전의 이해 실전</li>
+                    <li>변수를 고려한 실전 플레이</li>
+                </ul>
+                <p class="details">수강방식 | 온라인/오프라인 교육 진행</p>
+                <p class="details">수강시간 | 주 4시간(2일)</p>
+                <p class="details">수강인원 | 개별 1:1 코칭</p>
+                <p class="details">수강혜택 | 아카데미 연습실 자유 이용</p>
+                <p class="details">GG 리그오브레전드 토너먼트 팀 참가 기회</p>
+            </div>
+        </div>
+    </section>
+
+    <p style="float: right; margin-right:20px; font-size: 12px; color: #5c5c5c;">* 레벨테스트와 상담을 통해 배정하며, 세부 내용은 수강인원에 따라 변경될 수 있습니다.</p>
+
+    <footer>
+        <p>사업자등록번호: 000-00-00000 | Tel: 02-0000-0000 | EMAIL: email@domain.com</p>
+        <p>&copy; 2024 GG E-Sport Academy. All rights reserved.</p>
+    </footer>
+</body>
+</html>

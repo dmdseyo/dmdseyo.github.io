@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>수강생 후기 - GG E-Sports Academy</title>
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f3f3f3;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+}
+
+#logo img {
+    height: 50px;
+    transition: transform 0.3s;
+}
+
+#logo img:hover {
+    transform: scale(1.1);
+}
+
+#gnb ul {
+    display: flex;
+    list-style: none;
+}
+
+#gnb ul li {
+    margin-left: 40px;
+}
+
+#gnb ul li a {
+    color: #FF7D12;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 5px 10px;
+    line-height: 1.5;
+}
+
+#gnb ul li a:hover {
+    color: #FFEE15;
+}
+
+#testimonials {
+    padding: 50px 20px;
+    background-color: #f5f5f5;
+}
+
+#testimonials h2 {
+    text-align: center;
+    color: #FF7D12;
+    margin-bottom: 40px;
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.testimonial-card {
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 400px;
+    padding: 20px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.testimonial-card-header {
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.testimonial-card-border {
+    height: 2px;
+    background-color: #000;
+    margin: 10px 0;
+}
+
+.testimonial-card-text {
+    font-size: 14px;
+    color: #333;
+    line-height: 1.5;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+footer p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+#interview {
+    text-align: center;
+    margin: 60px 0;
+}
+
+#interview h3 {
+    font-size: 40px;
+    color: #FF7D12;
+    margin-bottom: 20px;
+}
+
+#interview video {
+    width: 80%;
+    max-width: 800px;
+}
+
+#extra-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.testimonial-table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+.image-cell {
+    width: 30%;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.testimonial-content-table {
+    width: 100%;
+    margin-left: 50px;
+}
+
+.name-nickname {
+    font-size: 28px;
+    color: #333;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+.interview-text {
+    font-size: 12px;
+    color: #333;
+    line-height: 1.5;
+    margin-top: 10px;
+}
+
+@media (max-width: 1024px) {
+    #gnb ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #gnb ul li {
+        margin: 10px 0;
+    }
+
+    .testimonial-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    #interview {
+        margin-top: 400px;
+    }
+    #extra-image {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 60px;
+        margin-bottom: 60px;
+        max-width: 80%;
+    }
+    .testimonial-table {
+        display: flex;
+        flex-direction: column;
+    }
+
+ .testimonial-table .image-cell {
+        display: none;
+    }
+
+    .testimonial-table img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .testimonial-table .testimonial-content-table {
+        width: 100%;
+    }
+    .testimonial-table .name-nickname {
+        display: none;
+    }
+
+    .testimonial-table .interview-text {
+        display: none;
+    }
+    #gnb ul {
+        flex-direction: column;
+    }
+
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #interview h3 {
+        font-size: 30px;
+    }
+
+    .testimonial-card-header {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    #logo img {
+        height: 40px;
+    }
+    #extra-image {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 60px;
+        margin-bottom: 60px;
+        max-width: 90%;
+    }
+    .testimonial-table {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .testimonial-table .image-cell {
+        display: none;
+    }
+
+    .testimonial-table img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .testimonial-table .testimonial-content-table {
+        width: 100%;
+    }
+
+    .testimonial-table .name-nickname {
+        font-size: 10px;
+    }
+
+    .testimonial-table .interview-text {
+        font-size: 8px;
+        line-height: 1;
+    }
+    #interview {
+        margin-top: 1200px;
+    }
+
+    .testimonial-card {
+        height: auto;
+    }
+
+    .testimonial-card-header {
+        font-size: 14px;
+    }
+
+    .testimonial-card-text {
+        font-size: 12px;
+    }
+
+    footer p {
+        font-size: 12px;
+    }
+
+    #interview h3 {
+        font-size: 18px;
+        margin-top: 10px;
+    }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <a href="index.html"><img src="로고.png" alt="GG E-Sports Academy Logo"></a>
+        </div>
+        <nav id="gnb">
+            <ul>
+                <li><a href="index1.html">프로그램 과정</a></li>
+                <li><a href="index2.html">코치진 안내</a></li>
+                <li><a href="index3.html">수강생 후기</a></li>
+                <li><a href="index4.html">FAQ</a></li>
+                <li><a href="index5.html">학원 캠퍼스</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="interview">
+        <h3 style="margin-top: 180px;">GG Game Academy와 함께라면 가능합니다!</h3>
+        <video controls>
+            <source src="인터뷰.mp4" type="video/mp4"> 
+        </video>
+    </section>
+
+    <h2 style="text-align: center; color: #FF7D12;">실제 수강생 후기</h2>
+    <p style="text-align: center; margin-bottom: 100px; font-size: 14px;">생생한 후기를 전합니다</p>
+    <section id="extra-image">
+        <table class="testimonial-table">
+            <tr>
+                <td class="image-cell">
+                    <img src="수강생.jpg" alt="수험생 이미지">
+                </td>
+                <td>
+                    <table class="testimonial-content-table">
+                        <tr>
+                            <td colspan="2" class="name-nickname">
+                                박창석/RUDY93
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="interview-text">
+                                <p style="line-height: 3;"><span style="font-weight: bold; font-size: 24px;">"</span>게임을 통해 더 많은 것을 배울 수 있었고, 코치님의 지도 덕분에 빠르게 성장할 수 있었습니다.</p>
+                                <p style="line-height: 5;">매일의 훈련이 정말 유익했고, 이곳에서 배운 내용은 제 게임 실력을 크게 향상시켰어요.</p>
+                                <p style="line-height: 5;">특히 팀워크 훈련을 통해 다른 선수들과의 협업 능력도 크게 향상되었습니다.</p>
+                                <p style="line-height: 3;">이제 저는 자신감을 가지고 경기에서 더 나은 성과를 내고 있습니다.<span style="font-weight: bold; font-size: 24px;">"</span></p>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </section>
+
+    <section id="testimonials">
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <div class="testimonial-card-header">
+                    <h3>김태현 / THUNDERFOX</h3>
+                </div>
+                <div class="testimonial-card-border"></div>
+                <div class="testimonial-card-text">
+                    <p>"매일 조금씩 실력이 늘어나는 것을 실감하고 있습니다! 코치님의 맞춤형 지도 덕분이에요.</p>
+                    <p>게임에 대한 접근 방식이 완전히 달라졌어요."</p>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-card-header">
+                    <h3>박지훈 / SHADOWMASTER</h3>
+                </div>
+                <div class="testimonial-card-border"></div>
+                <div class="testimonial-card-text">
+                    <p>"이곳에서 배우고 나서 게임에 대한 접근 방식이 완전히 달라졌어요. 진정한 프로로 거듭날 수 있었어요!</p>
+                    <p>팀워크 훈련을 통해 실력을 키울 수 있었어요."</p>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-card-header">
+                    <h3>이수빈 / NIGHTHAWK</h3>
+                </div>
+                <div class="testimonial-card-border"></div>
+                <div class="testimonial-card-text">
+                    <p>"매주 진행되는 팀 워크 세션은 너무나 유익했어요. 실전처럼 연습할 수 있어 자신감이 생겼어요.</p>
+                    <p>진짜 프로처럼 연습할 수 있었어요!"</p>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-card-header">
+                    <h3>정동윤 / STORMRIDER</h3>
+                </div>
+                <div class="testimonial-card-border"></div>
+                <div class="testimonial-card-text">
+                    <p>"이곳에서 배운 팀워크와 실전 전략을 통해 많은 성과를 올릴 수 있었어요.</p>
+                    <p>게임을 진지하게 배울 수 있는 곳이었습니다."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <p>사업자등록번호: 000-00-00000 | Tel: 02-0000-0000 | EMAIL: email@domain.com</p>
+        <p>&copy; 2024 GG E-Sport Academy. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>학원 캠퍼스 - GG E-Sports Academy</title>
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #f3f3f3;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+}
+
+#logo img {
+    height: 50px;
+    transition: transform 0.3s;
+}
+
+#logo img:hover {
+    transform: scale(1.1);
+}
+
+#gnb ul {
+    display: flex;
+    list-style: none;
+}
+
+#gnb ul li {
+    margin-left: 40px;
+}
+
+#gnb ul li a {
+    color: #FF7D12;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 5px 10px;
+    line-height: 1.5;
+}
+
+#gnb ul li a:hover {
+    color: #FFEE15;
+}
+
+.campus-guide {
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    color: #FF7D12;
+    margin-top: 180px;
+    margin-bottom: 100px;
+}
+
+.campus-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 0 20px;
+    align-items: center;
+}
+
+.campus-photos {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.campus-photos h2 {
+    text-align: left !important;
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.photo-row {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.campus-photos img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    object-fit: cover;
+}
+
+.campus-text {
+    text-align: left;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.8;
+    margin-bottom: 80px;
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    margin-top: 50px;
+}
+
+footer p {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+@media (max-width: 1024px) {
+    #gnb ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #gnb ul li {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #gnb ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #gnb ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+    .campus-guide {
+        margin-top: 400px;
+    }
+
+    .campus-sections {
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .campus-photos {
+        width: 80%;
+    }
+
+    .photo-row {
+        flex-direction: column;
+    }
+
+    .campus-text {
+        font-size: 14px;
+        margin-bottom: 40px;
+    }
+
+    footer p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    #logo img {
+        height: 40px;
+    }
+
+    .campus-guide {
+        margin-top: 400px;
+        font-size: 24px;
+    }
+
+    .campus-photos img {
+        max-width: 120px;
+    }
+    .campus-text {
+        font-size: 14px;
+        margin-bottom: 40px;
+    }
+
+    footer p {
+        font-size: 10px;
+    }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <a href="index.html"><img src="로고.png" alt="GG E-Sports Academy Logo"></a>
+        </div>
+        <nav id="gnb">
+            <ul>
+                <li><a href="index1.html">프로그램 과정</a></li>
+                <li><a href="index2.html">코치진 안내</a></li>
+                <li><a href="index3.html">수강생 후기</a></li>
+                <li><a href="index4.html">FAQ</a></li>
+                <li><a href="index5.html">학원 캠퍼스</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="campus-guide">
+        <p>학원 캠퍼스 안내</p>
+    </section>
+
+    <div class="campus-sections">
+        <section class="campus-photos">
+            <h2>강남캠퍼스</h2>
+            <img src="학원1.png" alt="학원 사진 1">
+            <div class="photo-row">
+                <img src="학원2.png" alt="학원 사진 2">
+                <img src="학원3.png" alt="학원 사진 3">
+                <img src="학원4.png" alt="학원 사진 4">
+            </div>
+            <div class="campus-text">
+                <p>주소 | 서울특별시 강남구 학원로 123</p>
+                <p>대표번호 | 02-0000-0000</p>
+                <p>오시는 길 | 강남역 2번 출구에서 도보 5분</p>
+            </div>
+        </section>
+
+        <section class="campus-photos">
+            <h2>서초캠퍼스</h2>
+            <img src="학원5.png" alt="학원 사진 5">
+            <div class="photo-row">
+                <img src="학원6.png" alt="학원 사진 6">
+                <img src="학원7.png" alt="학원 사진 7">
+                <img src="학원8.png" alt="학원 사진 8">
+            </div>
+            <div class="campus-text">
+                <p>주소 | 서울특별시 서초구 캠퍼스로 456</p>
+                <p>대표번호 | 02-1111-1111</p>
+                <p>오시는 길 | 서초역 4번 출구에서 도보 7분</p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>사업자등록번호: 000-00-00000 | Tel: 02-0000-0000 | EMAIL: email@domain.com</p>
+        <p>&copy; 2024 GG E-Sport Academy. All rights reserved.</p>
+    </footer>
+</body>
+</html>

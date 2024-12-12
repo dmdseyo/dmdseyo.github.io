@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - GG E-Sports Academy</title>
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f3f3;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+}
+
+#logo img {
+    height: 50px;
+    transition: transform 0.3s;
+}
+
+#logo img:hover {
+    transform: scale(1.1);
+}
+
+#gnb ul {
+    display: flex;
+    list-style: none;
+}
+
+#gnb ul li {
+    margin-left: 40px;
+}
+
+#gnb ul li a {
+    color: #FF7D12;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 5px 10px;
+    line-height: 1.5;
+}
+
+#gnb ul li a:hover {
+    color: #FFEE15;
+}
+
+.faq-info {
+    display: block;
+    margin-top: 100px;
+    padding-top: 60px;
+}
+
+.faq-info div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 150px;
+    margin-bottom: 20px;
+    width: 80%;
+    background-color: #ffffff;
+    padding: 20px;
+    height: 100px;
+}
+
+.faq-info div p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    flex: 1;
+}
+
+.faq-info div img {
+    width: 30px;
+    height: 30px;
+    margin-left: 20px;
+}
+
+.accordion-container {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.accordion-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #FF7D12;
+    margin-top: 100px;
+}
+
+.accordion {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.accordion-item {
+    background-color: #ffffff;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.accordion-button {
+    width: 100%;
+    text-align: left;
+    padding: 15px;
+    background-color: transparent;
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.accordion-button:hover {
+    background-color: #ff7d123c;
+}
+
+.accordion-content {
+    padding: 10px;
+    background-color: #ffffff;
+    display: none;
+    border-top: 1px solid #ff7d123c;
+    text-align: left;
+    margin: 20px;
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    margin-top: 50px;
+}
+
+footer p {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+@media (max-width: 1024px) {
+    #gnb ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #gnb ul li {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #gnb ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #gnb ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+    .faq-info {
+        margin-top: 300px;
+    }
+    .faq-info h3 {
+        font-size: 14px;
+    }
+
+    .faq-info div {
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        align-items: flex-start;
+        margin-left: 40px;
+        margin-right: 20px;
+        height: auto;
+    }
+    .faq-info div img {
+        margin-right: 20px;
+    }
+
+    .accordion-title {
+        font-size: 20px;
+    }
+
+    footer p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    #logo img {
+        height: 40px;
+    }
+    .faq-info {
+        margin-top: 300px;
+    }
+    .faq-info h3 {
+        font-size: 14px;
+    }
+    .faq-info div {
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        margin-left: 30px;
+        margin-right: 10px;
+        margin-top: 150px;
+    }
+    .faq-info div img {
+        margin-right: 20px;
+    }
+    .accordion-button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    footer p {
+        font-size: 10px;
+    }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <a href="index.html"><img src="로고.png" alt="GG E-Sports Academy Logo"></a>
+        </div>
+        <nav id="gnb">
+            <ul>
+                <li><a href="index1.html">프로그램 과정</a></li>
+                <li><a href="index2.html">코치진 안내</a></li>
+                <li><a href="index3.html">수강생 후기</a></li>
+                <li><a href="index4.html">FAQ</a></li>
+                <li><a href="index5.html">학원 캠퍼스</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="faq-info">
+        <h3 style="margin-top: 20px; margin-bottom: 20px; color: #FF7D12; text-align: center; font-size: 36px;">24시간 열려있는 문의 / 상담</h3>
+        <div>
+            <p>전화번호 02-0000-0000</p>
+            <img src="전화번호.png" alt="전화 아이콘">
+        </div>
+        <div>
+            <p>고객센터 02-1111-1111</p>
+            <img src="메세지.png" alt="고객센터 아이콘">
+        </div>
+    </section>
+
+    <section class="accordion-container">
+        <p class="accordion-title">자주 묻는 질문</p>
+        <p style="text-align: center; margin-bottom: 100px; font-size: 14px;">여러분들이 제일 궁금해하실 질문을 모았습니다</p>
+        <div class="accordion">
+            <div class="accordion-item">
+                <button class="accordion-button">Q. 게임을 아예 못해도 괜찮나요?</button>
+                <div class="accordion-content">
+                    <p>A. 게임 입문자의 경우, 초보반부터 차근차근 시작할 수 있습니다. 모두에게 처음은 있으니까요.</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-button">Q. 수강생 나이 제한이 있나요?</button>
+                <div class="accordion-content">
+                    <p>A. 미성년자도 수강이 가능합니다. 다만, 일부 강의의 경우 보호자의 동의가 필요할 수 있습니다.</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-button">Q. 레벨테스트는 필수인가요?</button>
+                <div class="accordion-content">
+                    <p>A. 레벨테스트는 필수는 아니지만, 수강생들의 실력을 파악하고 이를 통해 맞는 레벨로 배정하기 위해 필요한 단계입니다.</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-button">Q. 강사님을 고를 수 있나요?</button>
+                <div class="accordion-content">
+                    <p>A. 원하는 강사님이 있더라도 수강하는 레벨에 따라 선택이 어려울 수 있습니다.</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-button">Q. 게임 연습은 자유인가요?</button>
+                <div class="accordion-content">
+                    <p>A. 일부 커리큘럼의 경우 연습실을 무한 제공하고 있습니다.</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-button">Q. 집에 컴퓨터가 없는데, 구매해야 할까요?</button>
+                <div class="accordion-content">
+                    <p>A. 집에 컴퓨터가 없다고 해서 구매하실 필요는 없습니다. 아카데미에서 자유롭게 연습하세요.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>사업자등록번호: 000-00-00000 | Tel: 02-0000-0000 | EMAIL: email@domain.com</p>
+        <p>&copy; 2024 GG E-Sport Academy. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const buttons = document.querySelectorAll('.accordion-button');
+
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                content.style.display = content.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+    </script>
+</body>
+</html>
